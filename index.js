@@ -6,8 +6,9 @@ import cors from "cors";
 const app = express();
 const httpServer = createServer(app);
 
-app.use(cors());
-
+app.use(cors({
+  origin: "https://chess-one-jet.vercel.app"
+}));
 const io = new Server(httpServer, {
   cors: {
     origin: "https://chess-one-jet.vercel.app", 
