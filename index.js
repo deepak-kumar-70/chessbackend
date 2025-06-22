@@ -10,7 +10,7 @@ app.use(cors());
 
 const io = new Server(httpServer, {
   cors: {
-    origin: "*",
+    origin: "https://chess-one-jet.vercel.app", 
     methods: ["GET", "POST"],
   },
 });
